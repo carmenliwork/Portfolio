@@ -1,38 +1,23 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Carmen Li Portfolio</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Carmen Li | Marketing &amp; Communications Portfolio</title><meta name="description" content="Portfolio of Carmen Li, marketing and communications professional with 8+ years of experience in brand, digital, partnerships, content and experiential campaigns."><meta name="theme-color" content="#FAF7F2"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,wght@1,400;1,500&display=swap">
 <style>
 /* Layout concept: password gate, then one endless scroll of full-width slides.
    Six pillars each open with a black band and giant title, then white sections with task, results and images.
    Monochrome with one jade accent. A single frozen header carries the name; dark mode inverts the black bands. */
+/* Layout: password gate, then one editorial scroll. Warm off-white, cream and charcoal with a muted teal accent;
+   gradients are supporting surfaces only. Dark charcoal-to-teal is kept for the gate, the key-result card and the close. */
 :root {
-  --paper: #FBFBFA;
-  --ink: #0B0B0B;
-  --mute: #5C5C5A;
-  --line: #D9D9D6;
-  --grey: #EDEDEB;
-  --slot: #E4E4E1;
-  --dark: #0B0B0B;
-  --dark-ink: #FBFBFA;
-  --dark-mute: #A3A3A0;
-  --accent: #0A6B5F;
+  --paper: #FAF7F2; --ink: #23282B; --mute: #5B6360; --line: #DED7CB; --grey: #EEEAE2; --slot: #E7E3DA; --cream: #F3EDE2;
+  --dark: #1F3A39; --dark-ink: #F6F2EA; --dark-mute: #B4C0BC; --accent: #1F6F6B;
+  --g-teal: linear-gradient(115deg, #2B7A76 0%, #5C8FA8 100%);
+  --g-dark: linear-gradient(140deg, #272D30 0%, #1C4543 100%);
   --display: "Inter Tight", "PingFang HK", "Microsoft JhengHei", system-ui, sans-serif;
   --body: "Inter", "PingFang HK", "Microsoft JhengHei", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
-  --hdr: 2.75rem;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #0B0B0B; --ink: #F4F4F2; --mute: #A3A3A0; --line: #2A2A28; --grey: #161615; --slot: #1C1C1B;
-    --dark: #F4F4F2; --dark-ink: #0B0B0B; --dark-mute: #55554F; --accent: #5CC4B2; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --paper: #0B0B0B; --ink: #F4F4F2; --mute: #A3A3A0; --line: #2A2A28; --grey: #161615; --slot: #1C1C1B;
-  --dark: #F4F4F2; --dark-ink: #0B0B0B; --dark-mute: #55554F; --accent: #5CC4B2; color-scheme: dark;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --hdr: 2.75rem; --sec: clamp(4.5rem, 9vw, 8rem); color-scheme: light;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -340,6 +325,219 @@ button { font: inherit; color: inherit; }
   #hdrLabel { display: none; }
   .masonry { columns: 2 140px; }
 }
+
+/* ===== Refresh layer ===== */
+body { background: radial-gradient(60rem 40rem at 90% -5%, rgba(92,143,168,.13), transparent 60%), radial-gradient(50rem 36rem at -10% 8%, rgba(43,122,118,.09), transparent 60%), linear-gradient(180deg, var(--paper), #F6F1E8 60%, var(--paper)); background-attachment: scroll; }
+.wrap { max-width: 1240px; padding-left: max(clamp(20px, 5vw, 56px), env(safe-area-inset-left, 0px)); padding-right: max(clamp(20px, 5vw, 56px), env(safe-area-inset-right, 0px)); }
+.dark { background: var(--g-dark); color: var(--dark-ink); }
+.gt { background: var(--g-teal); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--accent); }
+@supports not (-webkit-background-clip: text) { .gt { -webkit-text-fill-color: currentColor; } }
+.gate .giant { font-size: clamp(2.8rem, 10vw, 6.5rem); line-height: .95; }
+.gate button { color: var(--ink); background: var(--dark-ink); }
+.top { background: rgba(250,247,242,.82); border-bottom: 1px solid rgba(35,40,43,.07); }
+.top.on-dark { border-bottom-color: rgba(255,255,255,.1); }
+.progress { height: 2px; background: var(--g-teal); }
+.edit-btn { min-height: 28px; }
+.giant { font-size: clamp(2.8rem, 8vw, 6rem); line-height: .98; letter-spacing: -.045em; }
+.meta { border-bottom: 1px solid var(--line); padding-block: .9rem; color: var(--mute); }
+
+/* Hero */
+.hero { padding-top: calc(var(--hdr) + env(safe-area-inset-top, 0px) + 1rem); padding-bottom: var(--sec); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, .6fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; padding-top: clamp(2.5rem, 7vw, 5.5rem); }
+.eyebrow { color: var(--accent); margin-bottom: 1.5rem; }
+.hero h1 { font: 600 clamp(2rem, 4.7vw, 3.8rem)/1.1 var(--display); letter-spacing: -.035em; text-wrap: balance; }
+.hero h1 em { font: italic 500 1.06em/1 var(--serif); letter-spacing: -.01em; padding-right: .06em; }
+.lede { margin-top: 1.75rem; max-width: 54ch; font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.6; color: var(--mute); }
+.cta { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 2.25rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 1.4rem; border-radius: 99px; font: 600 .84rem/1 var(--display); background: var(--g-dark); color: #fff; border: 1px solid transparent; transition: transform .25s, box-shadow .25s; }
+.btn.ghost { background: transparent; color: var(--ink); border-color: rgba(35,40,43,.28); }
+@media (hover: hover) { .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -10px rgba(28,69,67,.6); } .btn.ghost:hover { background: rgba(43,122,118,.08); box-shadow: none; } }
+.portrait { position: relative; width: min(100%, 300px); justify-self: end; isolation: isolate; }
+.portrait::before { content: ""; position: absolute; z-index: -1; inset: 8% -8% -6% 10%; border-radius: 28px; background: var(--g-teal); opacity: .18; transform: rotate(3deg); }
+.round { border-radius: 24px; }
+.tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: clamp(2.5rem, 6vw, 4.5rem); }
+.tags li { font: 500 .78rem/1 var(--display); padding: .6rem .95rem; border-radius: 99px; background: rgba(255,255,255,.65); border: 1px solid var(--line); color: var(--mute); }
+
+.statement { padding-block: 1rem var(--sec); }
+.words { font-size: clamp(1.7rem, 4vw, 3.2rem); max-width: 26ch; }
+.sect-title { font-size: clamp(1.7rem, 3.4vw, 2.6rem); padding-block: 0 2rem; }
+.block { padding-bottom: var(--sec); }
+
+/* Timeline */
+.timeline { display: grid; margin-top: .5rem; }
+.tl { display: grid; grid-template-columns: 9.5rem 14px minmax(0, 1fr); gap: 0 1.75rem; padding-bottom: 1.75rem; }
+.tl-date { padding-top: 1.35rem; color: var(--mute); white-space: nowrap; }
+.rail { position: relative; }
+.rail::before { content: ""; position: absolute; left: 50%; top: 1.6rem; bottom: -1.75rem; width: 1px; background: var(--line); }
+.tl:last-child .rail::before { display: none; }
+.rail i { position: absolute; left: 0; top: 1.45rem; width: 14px; height: 14px; border-radius: 50%; background: var(--paper); border: 2px solid #8FA9A6; }
+.tl.now .rail i { background: var(--g-teal); border-color: transparent; box-shadow: 0 0 0 5px rgba(43,122,118,.15); }
+.tl-body { padding: 1.1rem 0; min-width: 0; }
+.tl-body .t { font: 600 clamp(1.1rem, 2vw, 1.4rem)/1.2 var(--display); letter-spacing: -.02em; }
+.tl-body .role { margin-top: .3rem; font-weight: 500; }
+.tl-body .mute { margin-top: .4rem; max-width: 56ch; }
+.tl.now .tl-body { padding: 1.4rem 1.6rem; border-radius: 18px; border: 1px solid rgba(43,122,118,.25); background: linear-gradient(135deg, rgba(43,122,118,.13), rgba(92,143,168,.09) 70%, rgba(255,255,255,.5)); }
+.tl.now .t { font-size: clamp(1.25rem, 2.3vw, 1.65rem); }
+.badge { display: inline-block; margin-bottom: .7rem; padding: .35rem .65rem; border-radius: 99px; background: var(--g-dark); color: #fff; }
+
+/* Rows + marquee */
+.rows { border-top: 1px solid var(--line); }
+@media (hover: hover) {
+  .row:hover { background: linear-gradient(90deg, rgba(43,122,118,.11), rgba(92,143,168,.05)); color: var(--ink); border-radius: 12px; }
+  .row:hover .mute { color: var(--mute); }
+}
+.marquee { border-block: 1px solid var(--line); background: linear-gradient(90deg, var(--cream), #E4ECEA 60%, var(--cream)); padding-block: 1rem; }
+.track span { font: 500 clamp(1.1rem, 2.4vw, 1.7rem)/1 var(--display); letter-spacing: -.02em; color: var(--ink); }
+.track span::after { background: var(--g-teal); }
+
+/* Pillar bands */
+.cat-hero { background: var(--band, var(--cream)); padding-top: calc(var(--hdr) + env(safe-area-inset-top, 0px) + clamp(2.5rem, 6vw, 4.5rem)); padding-bottom: clamp(2.5rem, 5vw, 3.5rem); color: var(--ink); }
+.cat-hero::after { content: ""; position: absolute; right: -6%; top: -35%; width: min(46vw, 540px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(43,122,118,.17), transparent 66%); pointer-events: none; }
+.cat-hero > .wrap { position: relative; z-index: 1; }
+.pn { color: var(--accent); }
+.band-t { margin-top: 1.1rem; max-width: 20ch; font: 600 clamp(2rem, 5vw, 3.8rem)/1.06 var(--display); letter-spacing: -.04em; text-wrap: balance; }
+.cat-info { margin-top: clamp(1.75rem, 4vw, 2.75rem); border-top: 1px solid rgba(35,40,43,.16); font-size: .92rem; }
+.cat-info .mute { color: var(--mute); }
+#p1 { --band: linear-gradient(150deg, #D9EAE6 0%, #E1EAF1 58%, #FAF7F2 100%); }
+#p2 { --band: linear-gradient(150deg, #F5EAD8 0%, #EADFCB 58%, #FAF7F2 100%); }
+#p3 { --band: linear-gradient(150deg, #E6E8E5 0%, #D6E6E2 62%, #FAF7F2 100%); }
+#p4 { --band: linear-gradient(150deg, #DCE7EE 0%, #E9E8E0 62%, #FAF7F2 100%); }
+#p5 { --band: linear-gradient(150deg, #E0E9DC 0%, #D6E6E1 60%, #FAF7F2 100%); }
+#value { --band: linear-gradient(150deg, #EDE5D5 0%, #DAE9E5 58%, #FAF7F2 100%); }
+.cat-body { padding-bottom: var(--sec); }
+
+/* Sections and cases */
+.sec { padding-block: clamp(3.5rem, 7vw, 6rem) 1rem; }
+.cat-body .sec:first-child { padding-top: clamp(2.5rem, 5vw, 3.5rem); }
+.sec-h { margin-bottom: clamp(2rem, 4vw, 3rem); }
+.sec-h h3 { font-size: clamp(1.5rem, 2.8vw, 2.1rem); max-width: 26ch; }
+.sec-h h3::before { content: ""; display: block; width: 2.5rem; height: 3px; border-radius: 2px; background: var(--g-teal); margin-bottom: 1.1rem; }
+.case { padding-bottom: clamp(2.5rem, 5vw, 3.5rem); }
+.case h4 { margin-top: .6rem; max-width: 28ch; text-wrap: balance; }
+.case p { margin-top: 1rem; max-width: 56ch; }
+.bul { margin-top: 1.25rem; }
+.split { gap: clamp(2rem, 5vw, 4.5rem); }
+.masonry, .pair { margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.sub-label { margin-top: 1rem; }
+.metrics { gap: 1rem; padding-top: 0; border-top: 0; margin-top: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); }
+.metrics::before { content: "Result"; grid-column: 1 / -1; font: 500 .68rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
+.metrics.m4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.metric { padding: 1.25rem 1.3rem; border-radius: 16px; border: 1px solid var(--line); background: linear-gradient(145deg, #fff, var(--cream)); }
+.metric .n { font-size: clamp(1.9rem, 3.4vw, 2.8rem); white-space: nowrap; overflow-wrap: normal; background: var(--g-teal); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--accent); width: fit-content; max-width: 100%; }
+.metric .l { margin-top: .55rem; font-size: .88rem; max-width: none; }
+
+/* Image slots */
+.slot { background: linear-gradient(145deg, #F0EADF, #E1E9E7); border: 1px solid rgba(35,40,43,.1); border-radius: 14px; }
+.slot-note, .slot-spec { opacity: .75; }
+.ba { border-radius: 14px; }
+.phone { background: #2A2F32; }
+.lock-img .slot[data-free]:not(.has-img) { display: none; }
+.lock-img :is(.masonry, .strip, .pair):not(:has(.has-img)) { display: none; }
+.strip { -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+
+/* Interactive blocks */
+.paw-zone { border-radius: 20px; background: linear-gradient(135deg, #E3EDEA, #F1EADF); }
+.seg { border-color: var(--accent); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+.seg button { min-height: 36px; }
+.sub-card { border-radius: 20px; border: 1px solid var(--line); background: linear-gradient(150deg, #fff, var(--cream)); }
+.dine-btn { border-color: var(--accent); min-height: 40px; }
+.dine-btn:hover { background: var(--accent); color: #fff; }
+.final-h { font-size: clamp(1.8rem, 3.8vw, 3rem); max-width: 24ch; }
+.flow-hint { margin-top: 1.5rem; }
+
+/* Key achievements */
+.kpi-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); }
+.kpi-card { display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; min-width: 0; padding: clamp(1.4rem, 3vw, 2.2rem); border-radius: 22px; border: 1px solid var(--line); background: linear-gradient(150deg, #fff 0%, var(--cream) 100%); }
+.kpi-card .n { font: 600 clamp(2rem, 4vw, 3.4rem)/1 var(--display); letter-spacing: -.045em; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.kpi-card .l { margin-top: .6rem; font: 600 1rem/1.3 var(--display); }
+.kpi-card .s { margin-top: .35rem; color: var(--accent); }
+.kpi-card .n.gt { width: fit-content; max-width: 100%; }
+.kpi-card.feat { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(1.75rem, 4vw, 3.5rem); align-items: center; border: 0; background: var(--g-dark); color: var(--dark-ink); position: relative; overflow: hidden; }
+.kpi-card.feat::after { content: ""; position: absolute; right: -10%; top: -40%; width: 60%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(143,200,192,.2), transparent 65%); pointer-events: none; }
+.feat > * { position: relative; z-index: 1; }
+.feat .s { color: #9ED6CF; margin: 0; }
+.feat h4 { margin-top: .9rem; font: 600 clamp(1.4rem, 2.6vw, 2rem)/1.15 var(--display); letter-spacing: -.03em; max-width: 16ch; }
+.feat p { margin-top: .9rem; color: var(--dark-mute); max-width: 34ch; }
+.quad { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; }
+.quad > div { padding: 1.4rem 1.25rem; border-top: 1px solid rgba(255,255,255,.14); min-width: 0; }
+.quad > div:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.14); padding-left: 0; }
+.quad > div:nth-child(-n+2) { border-top: 0; padding-top: 0; }
+.quad > div:nth-child(n+3) { padding-bottom: 0; }
+.quad .n { font: 600 clamp(2.2rem, 4.4vw, 3.6rem)/1 var(--display); letter-spacing: -.045em; white-space: nowrap; font-variant-numeric: tabular-nums; background: linear-gradient(120deg, #A9DDD5, #BCD6E6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: #A9DDD5; width: fit-content; max-width: 100%; }
+.quad .l { margin-top: .55rem; font-size: .9rem; color: var(--dark-mute); }
+.chips { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.chip { padding: 1.25rem 1.3rem; border-radius: 16px; border: 1px solid var(--line); background: rgba(255,255,255,.6); }
+.chip .n { font: 600 clamp(1.6rem, 2.6vw, 2.1rem)/1 var(--display); letter-spacing: -.04em; white-space: nowrap; width: fit-content; }
+.chip .l { margin-top: .5rem; font-size: .9rem; }
+.chip .s { margin-top: .5rem; color: var(--mute); }
+
+/* Close */
+.close { padding-block: var(--sec) 2rem; }
+.close .giant { margin-top: clamp(2rem, 5vw, 3.5rem); }
+.close .sub { margin-top: 1.5rem; font-size: 1.1rem; color: var(--dark-mute); }
+.cols { border-top-color: rgba(255,255,255,.2); margin-top: clamp(2.5rem, 6vw, 4rem); }
+.foot { padding-block: 3rem 7rem; }
+
+/* Floating navigation */
+.dock { padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
+.dock nav { gap: .1rem; padding: .25rem; background: rgba(250,247,242,.88); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); color: var(--ink); border: 1px solid rgba(35,40,43,.1); box-shadow: 0 4px 14px rgba(35,40,43,.08); }
+.dock a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 .95rem; border: 0; border-radius: 99px; font: 500 .7rem/1 var(--display); letter-spacing: .04em; color: var(--mute); opacity: 1; transition: background-color .25s, color .25s; -webkit-tap-highlight-color: transparent; }
+.dock a:hover { color: var(--ink); }
+.dock a[aria-current="true"] { background: var(--g-dark); color: #fff; }
+
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .portrait { order: 2; width: 200px; justify-self: start; }
+  .tl { grid-template-columns: 14px minmax(0, 1fr); gap: .2rem 1.1rem; grid-template-areas: "rail date" "rail body"; }
+  .tl-date { grid-area: date; padding-top: 1.1rem; }
+  .rail { grid-area: rail; }
+  .tl-body { grid-area: body; padding-top: .3rem; }
+  .tl.now .tl-body { padding: 1.2rem 1.25rem; }
+  .rail i, .rail::before { top: 1.25rem; }
+  .rail::before { top: 1.5rem; }
+  .kpi-card.feat { grid-template-columns: minmax(0, 1fr); }
+  .feat h4, .feat p { max-width: none; }
+  .chips { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .kpi-grid { grid-template-columns: minmax(0, 1fr); }
+  .metric { padding: 1rem; }
+  .metrics.m4 { gap: .75rem; }
+  .btn { flex: 1 1 auto; }
+  .tags li { font-size: .74rem; padding: .55rem .8rem; }
+  .band-t { max-width: none; }
+  .quad > div { padding: 1.1rem .9rem; }
+  .quad .n { font-size: clamp(1.9rem, 10vw, 2.4rem); }
+  .dock a { padding: 0 .8rem; }
+  .cat-info { flex-direction: column; align-items: flex-start; }
+}
+
+/* ===== Round 2 ===== */
+.split.one { grid-template-columns: minmax(0, 1fr); }
+.paw-zone { min-height: 220px; align-content: end; }
+.soap { -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; outline: 0; box-shadow: 0 6px 12px -8px rgba(80,120,140,.4); user-select: none; -webkit-user-select: none; }
+.soap:active { box-shadow: none; }
+.soap:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.show { position: relative; margin-top: 1.5rem; }
+.show-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; border-radius: 14px; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
+.show-track::-webkit-scrollbar { display: none; }
+.show-track .slot { flex: 0 0 100%; scroll-snap-align: start; border-radius: 0; }
+.show-btn { position: absolute; top: calc(50% - 22px); width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(250,247,242,.9); color: var(--ink); font: 400 1.5rem/1 var(--display); cursor: pointer; -webkit-tap-highlight-color: transparent; box-shadow: 0 2px 10px rgba(35,40,43,.15); }
+.show-btn.prev { left: .75rem; } .show-btn.next { right: .75rem; }
+.show-count { text-align: right; margin-top: .75rem; }
+.dine-svg .mug { transition: transform .55s cubic-bezier(.3,.8,.2,1); transform-box: fill-box; transform-origin: 50% 100%; }
+.dine-svg.cheer .mug.l { transform: translateX(9px) rotate(8deg); }
+.dine-svg.cheer .mug.r { transform: translateX(-9px) rotate(-8deg); }
+.dine-svg .spark { opacity: 0; transform-box: fill-box; transform-origin: center; }
+.dine-svg.cheer .spark { animation: spark .9s .35s ease-out both; }
+@keyframes spark { 0% { opacity: 0; transform: scale(.4); } 35% { opacity: 1; } 100% { opacity: 0; transform: scale(1.25); } }
+.dine-svg .bb { animation: bb 3s linear infinite; }
+@keyframes bb { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: .8; } 100% { transform: translateY(-45px); opacity: 0; } }
+/* Visitors see only filled slots; uploads are for the owner */
+.lock-img .slot:not(.has-img) { display: none; }
+.lock-img :is(.masonry, .pair, .show, .portrait, .phone-wrap, .ba):not(:has(.has-img)) { display: none; }
+.lock-img .hero-grid:not(:has(.portrait .has-img)), .lock-img .split:not(:has(.has-img)) { grid-template-columns: minmax(0, 1fr); }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -361,7 +559,7 @@ button { font: inherit; color: inherit; }
 <!-- PASSWORD GATE -->
 <div class="gate dark" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateT">
   <div class="gate-in">
-    <p class="label" id="gateT">Carmen Li | Portfolio</p>
+    <p class="label" id="gateT">Carmen Li</p>
     <p class="giant"><span class="mask load"><span>Portfolio</span></span></p>
     <form id="gateForm" autocomplete="off" novalidate>
       <label class="label mute" for="pw">Enter the password to view</label>
@@ -381,16 +579,15 @@ button { font: inherit; color: inherit; }
     <span class="label">Carmen Li | Portfolio</span>
     <div class="r">
       <span class="label mute" id="hdrLabel">Introduction</span>
-      <button type="button" class="edit-btn" id="editBtn" aria-pressed="true">Edit images: on</button>
     </div>
   </div>
 </header>
 <div class="dock">
   <nav aria-label="Presentation parts">
-    <a href="#intro" data-part="intro">1 Intro</a>
-    <a href="#work" data-part="work">2 Work</a>
-    <a href="#value" data-part="value">3 Value</a>
-    <a href="#close" data-part="close">4 Close</a>
+    <a href="#intro" data-part="intro">Intro</a>
+    <a href="#work" data-part="work">Work</a>
+    <a href="#value" data-part="value">Value</a>
+    <a href="#close" data-part="close">Close</a>
   </nav>
 </div>
 
@@ -399,23 +596,17 @@ button { font: inherit; color: inherit; }
 <section id="intro">
   <div class="hero" data-stop data-label="Introduction">
     <div class="wrap">
-      <div class="meta"><span>Presented by: Carmen Li</span><span>November 2026</span></div>
-      <h1 class="giant"><span class="mask load"><span>Carmen Li</span></span></h1>
-      <p class="cue label mute"><i></i>Scroll, or use the arrow keys</p>
-    </div>
-  </div>
-
-  <div id="about" data-stop data-label="About me">
-    <div class="wrap">
-      <div class="about">
-        <div class="rv">
-          <h2>Hello!<br>I'm Carmen Li</h2>
-          <p>A marketer and communicator who enjoys turning thoughtful strategies into real-world brand moments. Over the past eight years across app growth, event launches, media relations, partnerships, and social listening, I’ve loved staying close to industry trends and teaming up with different stakeholders to connect with audiences in meaningful ways.</p>
+      <div class="hero-grid">
+        <div>
+          <h1>Marketing that connects <em class="gt">insight, creativity and impact.</em></h1>
+          <p class="lede">I’m Carmen Li, a marketing and communications professional with 8+ years of experience across brand strategy, digital marketing, partnerships, content development and experiential campaigns.</p>
+          <div class="cta"><a class="btn" href="#work">View selected work</a><a class="btn ghost" href="#value">Key achievements</a></div>
         </div>
-        <div class="portrait rv" style="--d:.12s">
+        <div class="portrait">
           <label class="slot round" style="--ar:4/5" data-n="01" data-note="Portrait or headshot." data-spec="4:5 · 1200 × 1500 px" data-alt="Portrait of Carmen Li"></label>
         </div>
       </div>
+      <ul class="tags"><li>Brand strategy</li><li>Digital marketing</li><li>Partnerships</li><li>Content development</li><li>Experiential campaigns</li></ul>
     </div>
   </div>
 
@@ -425,14 +616,14 @@ button { font: inherit; color: inherit; }
 
   <div class="block" id="career" data-stop data-label="Career journey">
     <div class="wrap">
-      <h2 class="sect-title rv">The journey so far.</h2>
-      <ol class="rows career">
-        <li class="row"><span class="label mute">2018 – 2020</span><span class="t">Wisers Information Limited</span><span>Client Solutions Officer</span><span class="mute">Media intelligence, social listening and data analytics.</span></li>
-        <li class="row"><span class="label mute">2020 – 2021</span><span class="t">Wave Insight Limited</span><span>Business Executive</span><span class="mute">Digital advertising, media proposals and commercial partnerships.</span></li>
-        <li class="row"><span class="label mute">2021 – 2022</span><span class="t">Matrix Research Limited (ACX)</span><span>Marketing Officer</span><span class="mute">Events, exhibitions and business collaborations.</span></li>
-        <li class="row"><span class="label mute">2022 – 2024</span><span class="t">CSL Mobile Limited (HKT)</span><span>Senior Marketing Executive</span><span class="mute">App marketing, customer segmentation and integrated promotions.</span></li>
-        <li class="row"><span class="label mute">2024 – Present</span><span class="t">CSL Mobile Limited (HKT)</span><span>Assistant Marketing Manager</span><span class="mute">Brand development, app transformation and co-marketing partnerships.</span></li>
-      </ol>
+      <h2 class="sect-title rv">Professional journey</h2>
+      <ol class="timeline">
+        <li class="tl now rv"><span class="tl-date label">2024 – Present</span><span class="rail"><i></i></span><div class="tl-body"><span class="badge mono">Current</span><h3 class="t">CSL Mobile Limited (HKT)</h3><p class="role">Assistant Marketing Manager</p><p class="mute">Brand development, app transformation and co-marketing partnerships.</p></div></li>
+        <li class="tl rv"><span class="tl-date label">2022 – 2024</span><span class="rail"><i></i></span><div class="tl-body"><h3 class="t">CSL Mobile Limited (HKT)</h3><p class="role">Senior Marketing Executive</p><p class="mute">App marketing, customer segmentation and integrated promotions.</p></div></li>
+        <li class="tl rv"><span class="tl-date label">2021 – 2022</span><span class="rail"><i></i></span><div class="tl-body"><h3 class="t">Matrix Research Limited (ACX)</h3><p class="role">Marketing Officer</p><p class="mute">Events, exhibitions and business collaborations.</p></div></li>
+        <li class="tl rv"><span class="tl-date label">2020 – 2021</span><span class="rail"><i></i></span><div class="tl-body"><h3 class="t">Wave Insight Limited</h3><p class="role">Business Executive</p><p class="mute">Digital advertising, media proposals and commercial partnerships.</p></div></li>
+        <li class="tl rv"><span class="tl-date label">2018 – 2020</span><span class="rail"><i></i></span><div class="tl-body"><h3 class="t">Wisers Information Limited</h3><p class="role">Client Solutions Officer</p><p class="mute">Media intelligence, social listening and data analytics.</p></div></li>
+        </ol>
     </div>
   </div>
 
@@ -447,7 +638,7 @@ button { font: inherit; color: inherit; }
 
   <div class="block" data-stop data-label="Contents">
     <div class="wrap">
-      <h2 class="sect-title rv">What you will find inside.</h2>
+      <h2 class="sect-title rv">Inside the portfolio</h2>
       <ol class="rows contents">
         <li><a class="row" href="#p1"><span class="label mute">01</span><span class="t">Marketing and Branding Strategy</span><span class="req mute">App revamp, pet-friendly stores, segmentation</span><span class="arrow">→</span></a></li>
         <li><a class="row" href="#p2"><span class="label mute">02</span><span class="t">Content Marketing &amp; Creative Development</span><span class="req mute">Facebook campaigns, booklets, retail materials</span><span class="arrow">→</span></a></li>
@@ -465,10 +656,11 @@ button { font: inherit; color: inherit; }
 
   <!-- 01 -->
   <article id="p1" data-label="01 Marketing and Branding Strategy">
-    <div class="cat-hero dark" data-stop>
+    <div class="cat-hero" data-stop>
       <div class="wrap">
-        <h2 class="giant long drift"><span class="mask"><span>Marketing and Branding Strategy</span></span></h2>
-        <div class="cat-info"><span><b>CSL Mobile Limited (HKT)</b> · 2022 – present</span><span class="mute">Fit for the role: communication strategy</span></div>
+        <p class="pn mono rv">01</p>
+        <h2 class="band-t rv">Marketing and Branding Strategy</h2>
+        <div class="cat-info"><span><b>CSL Mobile Limited (HKT)</b></span></div>
       </div>
     </div>
     <div class="cat-body">
@@ -478,12 +670,12 @@ button { font: inherit; color: inherit; }
           <div class="split case">
             <div>
               <span class="mono co">csl app revamp</span>
-              <h4>A refreshed app, and a promotion plan to bring users back to it.</h4>
-              <p>Managed the revamp of the csl mobile app and wrote the promotion strategy that followed. Set up a faster user acceptance testing process with the IT department.</p>
-              <div class="metrics">
+              <h4>A refreshed app, and a plan to bring users back.</h4>
+              <p>Managed the csl mobile app revamp and wrote the promotion strategy that followed. Set up a faster user acceptance testing process with IT.</p>
+              <div class="metrics m4">
                 <div class="metric"><div class="n"><span class="cnt" data-to="20" data-prefix="+" data-suffix="%">+20%</span></div><div class="l">User engagement</div></div>
                 <div class="metric"><div class="n"><span class="cnt" data-to="12" data-prefix="+" data-suffix="%">+12%</span></div><div class="l">App downloads</div></div>
-                <div class="metric"><div class="n"><span class="cnt" data-to="10" data-prefix="+" data-suffix="%">+10%</span></div><div class="l">Monthly active users from the promotion strategy</div></div>
+                <div class="metric"><div class="n"><span class="cnt" data-to="10" data-prefix="+" data-suffix="%">+10%</span></div><div class="l">Monthly active users from promotion</div></div>
                 <div class="metric"><div class="n"><span class="cnt" data-to="10" data-prefix="−" data-suffix="%">−10%</span></div><div class="l">User acceptance testing time</div></div>
               </div>
             </div>
@@ -502,11 +694,11 @@ button { font: inherit; color: inherit; }
 
           <div class="case">
             <span class="mono co">First csl pet-friendly AI store campaign</span>
-            <h4>Pet owners, invited into a store made for them.</h4>
-            <p>Launched the first designated pet-friendly csl AI stores within Q1, supported by drive-to-store promotions and co-marketing partners.</p>
+            <h4>A store made for pet owners.</h4>
+            <p>Launched the first designated pet-friendly csl AI stores in Q1, backed by drive-to-store promotions and co-marketing partners.</p>
             <div class="metrics">
               <div class="metric"><div class="n">Q1</div><div class="l">Pet-friendly stores launched</div></div>
-              <div class="metric"><div class="n"><span class="cnt" data-to="12" data-suffix="%">12%</span></div><div class="l">Coupon redemption rate on drive-to-store promotions</div></div>
+              <div class="metric"><div class="n"><span class="cnt" data-to="12" data-suffix="%">12%</span></div><div class="l">Coupon redemption rate</div></div>
             </div>
           </div>
           <div class="masonry lift">
@@ -521,13 +713,8 @@ button { font: inherit; color: inherit; }
           <div class="split">
             <div class="case">
               <span class="mono co">csl customer database</span>
-              <h4>Understanding different audiences, then speaking to each one.</h4>
-              <ul class="bul">
-                <li>Analysed customer databases and segmented audiences.</li>
-                <li>Developed personalised marketing campaigns.</li>
-                <li>Worked with data-driven insights to improve campaign effectiveness.</li>
-                <li>Achieved 25% improvement in campaign effectiveness and increased customer retention.</li>
-              </ul>
+              <h4>Speaking to each audience differently.</h4>
+              <ul class="bul"><li>Segmented customer databases and built personalised campaigns from data-driven insight.</li><li>Lifted campaign effectiveness by 25% and increased customer retention.</li></ul>
               <div class="metrics"><div class="metric"><div class="n"><span class="cnt" data-to="25" data-prefix="+" data-suffix="%">+25%</span></div><div class="l">Campaign effectiveness</div></div></div>
             </div>
             <label class="slot" data-free style="--ar:4/3" data-n="07" data-note="Segment diagram or a personalised campaign example, client data removed." data-alt="Customer segmentation example"></label>
@@ -539,10 +726,11 @@ button { font: inherit; color: inherit; }
 
   <!-- 02 -->
   <article id="p2" data-label="02 Content Marketing and Creative Development">
-    <div class="cat-hero dark" data-stop>
+    <div class="cat-hero" data-stop>
       <div class="wrap">
-        <h2 class="giant long drift"><span class="mask"><span>Content Marketing &amp; Creative Development</span></span></h2>
-        <div class="cat-info"><span><b>Wave Insight Limited</b> · <b>Matrix Research Limited (ACX)</b> · <b>CSL Mobile Limited (HKT)</b></span><span class="mute">Fit for the role: content marketing and print collateral</span></div>
+        <p class="pn mono rv">02</p>
+        <h2 class="band-t rv">Content Marketing &amp; Creative Development</h2>
+        <div class="cat-info"><span><b>Wave Insight Limited</b> · <b>Matrix Research Limited (ACX)</b> · <b>CSL Mobile Limited (HKT)</b></span></div>
       </div>
     </div>
     <div class="cat-body">
@@ -550,9 +738,10 @@ button { font: inherit; color: inherit; }
         <div class="sec" data-stop>
           <div class="sec-h"><h3>Digital Content and Social Media Campaigns</h3></div>
           <div class="case">
-            <span class="mono co">Wave Insight Limited · Facebook advertising</span>
-            <h4>Facebook Page campaigns with a return that could be measured.</h4>
-            <p>Managed advertising campaigns on Facebook Pages including Fortune Insight, Medical Inspire and GirlsMood.</p>
+            <span class="mono co">Wave Insight Limited · social media and advertising</span>
+            <h4>Facebook campaigns with measurable return.</h4>
+            <p>Managed social media pages for New World Group, overseeing content management and daily page operations.</p>
+            <p>Managed Facebook advertising campaigns for Fortune Insight, Medical Inspire and GirlsMood, including campaign execution and performance monitoring.</p>
             <div class="metrics"><div class="metric"><div class="n"><span class="cnt" data-to="20" data-prefix="+" data-suffix="%">+20%</span></div><div class="l">Improvement in advertising ROI</div></div></div>
           </div>
           <div class="masonry lift">
@@ -567,20 +756,18 @@ button { font: inherit; color: inherit; }
           <div class="sec-h"><h3>Creative Development and Marketing Collateral</h3></div>
           <div class="case">
             <span class="mono co">ACX booklet · csl retail offline materials</span>
-            <h4>Print and in-store materials, shown at full size.</h4>
-            <p>The ACX booklet from Matrix Research Limited (ACX) and csl retail offline materials from CSL Mobile Limited (HKT).</p>
+            <h4>Print and in-store materials.</h4>
+            <p>The ACX booklet (Matrix Research) and csl retail offline materials (CSL Mobile).</p>
           </div>
           <p class="sub-label label"><span>ACX booklet</span></p>
-          <div class="masonry lift" style="margin-bottom:2.5rem">
+          <div class="pair lift" style="margin-bottom:2.5rem">
             <label class="slot" data-free style="--ar:3/4" data-n="12" data-note="ACX booklet: cover or spread, any size." data-alt="ACX booklet"></label>
             <label class="slot" data-free style="--ar:4/3" data-n="13" data-note="ACX booklet: inside pages, any size." data-alt="ACX booklet inside pages"></label>
-            <label class="slot" data-free style="--ar:4/5" data-n="14" data-note="ACX booklet: detail, any size." data-alt="ACX booklet detail"></label>
           </div>
           <p class="sub-label label"><span>csl retail offline materials</span></p>
-          <div class="masonry lift">
+          <div class="pair lift">
             <label class="slot" data-free style="--ar:4/3" data-n="15" data-note="Store poster, display or leaflet, any size." data-alt="csl retail material"></label>
             <label class="slot" data-free style="--ar:3/4" data-n="16" data-note="Store poster, display or leaflet, any size." data-alt="csl retail material"></label>
-            <label class="slot" data-free style="--ar:1/1" data-n="17" data-note="Store poster, display or leaflet, any size." data-alt="csl retail material"></label>
           </div>
         </div>
       </div>
@@ -589,10 +776,11 @@ button { font: inherit; color: inherit; }
 
   <!-- 03 -->
   <article id="p3" data-label="03 Partnership, KOL and Media Marketing">
-    <div class="cat-hero dark" data-stop>
+    <div class="cat-hero" data-stop>
       <div class="wrap">
-        <h2 class="giant long drift"><span class="mask"><span>Partnership, KOL and Media Marketing</span></span></h2>
-        <div class="cat-info"><span><b>CSL Mobile Limited (HKT)</b> · <b>Wave Insight Limited</b> · <b>Matrix Research Limited (ACX)</b></span><span class="mute">Fit for the role: media networks and promotional gifts</span></div>
+        <p class="pn mono rv">03</p>
+        <h2 class="band-t rv">Partnership, KOL and Media Marketing</h2>
+        <div class="cat-info"><span><b>CSL Mobile Limited (HKT)</b> · <b>Wave Insight Limited</b> · <b>Matrix Research Limited (ACX)</b></span></div>
       </div>
     </div>
     <div class="cat-body">
@@ -601,12 +789,11 @@ button { font: inherit; color: inherit; }
           <div class="sec-h"><h3>Strategic Partnerships and Co-marketing</h3></div>
           <div class="case">
             <span class="mono co">csl x pet-related brand partnerships</span>
-            <h4>Pet brands that share the same customer, working on one campaign.</h4>
-            <p>Built co-marketing partnerships with pet insurance providers, organic food brands and a pet transport service.</p>
+            <h4>Pet brands, one shared customer.</h4>
+            <p>Developed co-marketing partnerships with various pet-related brands and service providers to enhance brand exposure and drive cross-promotional opportunities.</p>
             <div class="metrics"><div class="metric"><div class="n"><span class="cnt" data-to="50000" data-prefix="HK$" data-suffix="+">HK$50,000+</span></div><div class="l">Co-sponsored rewards secured</div></div></div>
           </div>
           <div class="paw-zone" id="pawZone">
-            <div class="paw-words"><span>Pet insurance</span><span>Organic pet food</span><span>Pet transport</span></div>
             <div class="paw-bar">
               <span class="label mute">Move your cursor, or tap, to leave paw prints</span>
               <div class="seg" role="group" aria-label="Paw type">
@@ -615,33 +802,32 @@ button { font: inherit; color: inherit; }
               </div>
             </div>
           </div>
-          <div class="masonry lift" style="margin-top:1rem">
+          <div class="pair lift" style="margin-top:1rem">
             <label class="slot" data-free style="--ar:4/3" data-n="18" data-note="Co-branded campaign visual, any size." data-alt="Pet partnership visual"></label>
             <label class="slot" data-free style="--ar:3/4" data-n="19" data-note="Partner logos or co-branded materials, any size." data-alt="Partner materials"></label>
             <label class="slot" data-free style="--ar:1/1" data-n="20" data-note="Co-sponsored rewards, any size." data-alt="Co-sponsored rewards"></label>
+            <label class="slot" data-free style="--ar:4/3" data-n="35" data-note="Partner campaign visual, any size." data-alt="Pet brand partnership"></label>
           </div>
         </div>
 
         <div class="sec" data-stop>
           <div class="sec-h"><h3>Media Relations and Stakeholder Collaboration</h3></div>
-          <div class="split">
+          <div class="split one">
             <div class="case">
               <span class="mono co">Wave Insight Limited · media sales</span>
               <h4>Media proposals that turned into partnerships and revenue.</h4>
-              <p>Worked with the sales team to build media proposals that increased successful partnerships and sales revenue.</p>
+              <p>Built media proposals with the sales team to win more partnerships and revenue.</p>
               <div class="metrics">
                 <div class="metric"><div class="n"><span class="cnt" data-to="20" data-prefix="+" data-suffix="%">+20%</span></div><div class="l">Increase in successful media partnerships</div></div>
                 <div class="metric"><div class="n"><span class="cnt" data-to="10" data-prefix="+" data-suffix="%">+10%</span></div><div class="l">Revenue from media sales</div></div>
               </div>
             </div>
-            <label class="slot" data-free style="--ar:4/3" data-n="21" data-note="Page from a media proposal, client details removed." data-alt="Media proposal sample"></label>
           </div>
           <div class="split" style="margin-top:1rem">
             <div class="case">
-              <span class="mono co">Matrix Research Limited (ACX) · vendor collaboration</span>
-              <h4>Working with vendors on a shared project.</h4>
-              <p>Collaborated with vendors on a joint project.</p>
-              <span class="add">Add: one line on what the project was and what it delivered</span>
+              <span class="mono co">Matrix Research Limited (ACX) · business partner collaboration</span>
+              <h4>Working with business partners on shared projects.</h4>
+              <p>Collaborated with business partners on joint marketing initiatives and shared projects, coordinating campaign execution, developing promotional content and ensuring alignment with business objectives.</p>
             </div>
             <div class="masonry two lift">
               <label class="slot" data-free style="--ar:4/3" data-n="22" data-note="Collaboration project, any size." data-alt="Vendor collaboration project"></label>
@@ -655,10 +841,11 @@ button { font: inherit; color: inherit; }
 
   <!-- 04 -->
   <article id="p4" data-label="04 Event and Experiential Marketing">
-    <div class="cat-hero dark" data-stop>
+    <div class="cat-hero" data-stop>
       <div class="wrap">
-        <h2 class="giant long drift"><span class="mask"><span>Event and Experiential Marketing</span></span></h2>
-        <div class="cat-info"><span><b>Matrix Research Limited (ACX)</b> · <b>CSL Mobile Limited (HKT)</b></span><span class="mute">Fit for the role: event and exhibition management</span></div>
+        <p class="pn mono rv">04</p>
+        <h2 class="band-t rv">Event and Experiential Marketing</h2>
+        <div class="cat-info"><span><b>Matrix Research Limited (ACX)</b> · <b>CSL Mobile Limited (HKT)</b></span></div>
       </div>
     </div>
     <div class="cat-body">
@@ -667,35 +854,26 @@ button { font: inherit; color: inherit; }
           <div class="sec-h"><h3>Event and Exhibition Management</h3></div>
           <div class="case">
             <span class="mono co">Matrix Research Limited (ACX) · trade shows</span>
-            <h4>Exhibitions and trade shows planned with business partners.</h4>
-            <p>Organised exhibitions and trade shows and led project planning sessions with business partners.</p>
+            <h4>Exhibitions planned with business partners.</h4>
+            <p>Organised exhibitions and trade shows and led planning sessions with business partners.</p>
             <div class="metrics">
               <div class="metric"><div class="n"><span class="cnt" data-to="40" data-prefix="+" data-suffix="%">+40%</span></div><div class="l">Brand visibility</div></div>
               <div class="metric"><div class="n"><span class="cnt" data-to="25" data-prefix="+" data-suffix="%">+25%</span></div><div class="l">Leads generated</div></div>
             </div>
           </div>
-          <p class="sub-label label"><span>Trade show photos</span><span>Drag to browse →</span></p>
-          <div class="strip" style="margin-bottom:3.5rem">
-            <label class="slot" data-free style="--ar:4/3" data-n="24" data-note="Trade show photo, any size." data-alt="Trade show photo"></label>
-            <label class="slot" data-free style="--ar:3/4" data-n="25" data-note="Trade show photo, any size." data-alt="Trade show photo"></label>
-            <label class="slot" data-free style="--ar:3/2" data-n="26" data-note="Trade show photo, any size." data-alt="Trade show photo"></label>
-            <label class="slot" data-free style="--ar:4/5" data-n="27" data-note="Trade show photo, any size." data-alt="Trade show photo"></label>
-          </div>
+          <p class="sub-label label"><span>Trade show photos</span></p>
+          <div class="pair lift" style="margin-bottom:3.5rem"><label class="slot" data-free style="--ar:4/3" data-n="24" data-note="Trade show photo, any size." data-alt="Trade show photo"></label><label class="slot" data-free style="--ar:4/3" data-n="25" data-note="Trade show photo, any size." data-alt="Trade show photo"></label></div>
 
           <div class="case" style="padding-bottom:1.5rem">
             <span class="mono co">CSL Mobile Limited (HKT) · csl pet shows</span>
-            <h4>From render to the real booth.</h4>
-            <p>Drag the handle to compare the booth design with the booth on the day.</p>
+            <h4>Pet shows, from booth to event.</h4>
+            <p>Booth and event photos from the csl pet shows.</p>
           </div>
-          <div class="ba land" data-ba>
-            <div class="ba-pane after"><label class="slot" data-n="29" data-tagx="Actual booth" data-note="Photo of the actual booth. Match the framing of Image 28." data-spec="16:10 · 1600 × 1000 px" data-alt="Actual booth photo"></label></div>
-            <div class="ba-pane before"><label class="slot" data-n="28" data-tagx="Render" data-note="Booth render." data-spec="16:10 · 1600 × 1000 px" data-alt="Booth render"></label></div>
-            <span class="ba-tag l">Render</span><span class="ba-tag r">Actual booth</span>
-            <div class="ba-handle" role="slider" tabindex="0" aria-label="Compare render and actual booth" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i>↔</i></div>
-          </div>
-          <div class="pair lift" style="margin-top:1rem">
-            <label class="slot" data-free style="--ar:4/3" data-n="30" data-note="Pet show event photo, any size." data-alt="csl pet show photo"></label>
-            <label class="slot" data-free style="--ar:4/3" data-n="31" data-note="Pet show event photo, any size." data-alt="csl pet show photo"></label>
+          <div class="show" id="petShow" role="region" aria-roledescription="carousel" aria-label="csl pet show photos">
+            <div class="show-track" tabindex="0"><label class="slot" style="--ar:16/10" data-n="28" data-note="Pet show photo, 16:10." data-spec="16:10 · 1600 × 1000 px" data-alt="csl pet show booth photo"></label><label class="slot" style="--ar:16/10" data-n="29" data-note="Pet show photo, 16:10." data-spec="16:10 · 1600 × 1000 px" data-alt="csl pet show booth photo"></label><label class="slot" style="--ar:16/10" data-n="30" data-note="Pet show photo, 16:10." data-spec="16:10 · 1600 × 1000 px" data-alt="csl pet show event photo"></label><label class="slot" style="--ar:16/10" data-n="31" data-note="Pet show photo, 16:10." data-spec="16:10 · 1600 × 1000 px" data-alt="csl pet show event photo"></label><label class="slot" style="--ar:16/10" data-n="33" data-note="Pet show photo, 16:10." data-spec="16:10 · 1600 × 1000 px" data-alt="csl pet show event photo"></label><label class="slot" style="--ar:16/10" data-n="34" data-note="Pet show photo, 16:10." data-spec="16:10 · 1600 × 1000 px" data-alt="csl pet show event photo"></label></div>
+            <button type="button" class="show-btn prev" aria-label="Previous photo">‹</button>
+            <button type="button" class="show-btn next" aria-label="Next photo">›</button>
+            <p class="show-count label mute" aria-live="polite">1 / 6</p>
           </div>
         </div>
       </div>
@@ -704,10 +882,11 @@ button { font: inherit; color: inherit; }
 
   <!-- 05 -->
   <article id="p5" data-label="05 Social Listening and Data-driven Marketing">
-    <div class="cat-hero dark" data-stop>
+    <div class="cat-hero" data-stop>
       <div class="wrap">
-        <h2 class="giant long drift"><span class="mask"><span>Social Listening &amp; Data-driven Marketing</span></span></h2>
-        <div class="cat-info"><span><b>Wisers Information Limited</b> · <b>Matrix Research Limited (ACX)</b> · <b>CSL Mobile Limited (HKT)</b></span><span class="mute">Fit for the role: social listening and trend analysis</span></div>
+        <p class="pn mono rv">05</p>
+        <h2 class="band-t rv">Social Listening &amp; Data-driven Marketing</h2>
+        <div class="cat-info"><span><b>Wisers Information Limited</b> · <b>Matrix Research Limited (ACX)</b> · <b>CSL Mobile Limited (HKT)</b></span></div>
       </div>
     </div>
     <div class="cat-body">
@@ -735,14 +914,13 @@ button { font: inherit; color: inherit; }
               <span class="no mono">iv</span><h4>Strategy Optimisation</h4><p>Improve brand communication and campaign performance</p>
             </div></li>
           </ol>
-          <p class="flow-hint label">Click a step to hold it. Click again to resume.</p>
+          <p class="flow-hint label">Tap or click a step to hold it. Do it again to resume.</p>
 
           <div class="metrics" style="margin-top:3rem">
             <div class="metric"><div class="n"><span class="cnt" data-to="25" data-prefix="+" data-suffix="%">+25%</span></div><div class="l">Data accuracy on analytics projects (Wisers)</div></div>
             <div class="metric"><div class="n"><span class="cnt" data-to="10" data-prefix="+" data-suffix="%">+10%</span></div><div class="l">Project efficiency (Wisers)</div></div>
             <div class="metric"><div class="n"><span class="cnt" data-to="15" data-prefix="+" data-suffix="%">+15%</span></div><div class="l">Customer engagement from trend-led strategy (Matrix Research)</div></div>
           </div>
-          <label class="slot" data-free style="--ar:21/9; margin-top:2rem" data-n="32" data-note="Optional: a report or dashboard, client names removed." data-alt="Social listening report"></label>
         </div>
       </div>
     </div>
@@ -751,33 +929,32 @@ button { font: inherit; color: inherit; }
 
 <!-- ============ PART 3 · VALUE ============ -->
 <section id="value" data-label="06 Key Achievements and My Value to Cathay">
-  <div class="cat-hero dark" data-stop>
-    <div class="wrap">
-      <h2 class="giant long drift"><span class="mask"><span>Key Achievements and My Value to Cathay</span></span></h2>
+  <div class="cat-hero" data-stop>
+      <div class="wrap">
+        <p class="pn mono rv">06</p>
+        <h2 class="band-t rv">Key Achievements and My Value to Cathay</h2>
       <div class="cat-info"><span><b>Assistant Marketing and Communications Manager</b></span><span class="mute">Results from my own work</span></div>
     </div>
   </div>
   <div class="cat-body">
     <div class="wrap">
       <div class="sec" data-stop>
-        <div class="ach">
-          <div class="rv"><div class="n"><span class="cnt" data-to="20" data-prefix="+" data-suffix="%">+20%</span></div><div class="l">User engagement</div><div class="s mono">csl App Revamp</div></div>
-          <div class="rv" style="--d:.06s"><div class="n"><span class="cnt" data-to="12" data-prefix="+" data-suffix="%">+12%</span></div><div class="l">App downloads</div><div class="s mono">csl App Revamp</div></div>
-          <div class="rv" style="--d:.12s"><div class="n"><span class="cnt" data-to="50000" data-prefix="HK$" data-suffix="+">HK$50,000+</span></div><div class="l">Co-sponsored rewards</div><div class="s mono">csl Partnerships</div></div>
-          <div class="rv"><div class="n"><span class="cnt" data-to="40" data-prefix="+" data-suffix="%">+40%</span></div><div class="l">Brand visibility</div><div class="s mono">Matrix Events</div></div>
-          <div class="rv" style="--d:.06s"><div class="n"><span class="cnt" data-to="25" data-prefix="+" data-suffix="%">+25%</span></div><div class="l">Leads generated</div><div class="s mono">Matrix Events</div></div>
-          <div class="rv" style="--d:.12s"><div class="n"><span class="cnt" data-to="25" data-prefix="+" data-suffix="%">+25%</span></div><div class="l">Campaign effectiveness</div><div class="s mono">csl Customer Segmentation</div></div>
+        <div class="sec-h"><h3>Key achievements</h3></div>
+        <div class="kpi-grid">
+          <div class="kpi-card feat rv">
+            <div><span class="s mono">csl App Revamp</span><h4>One revamp, four measurable results.</h4><p>Managed the app revamp and the promotion strategy that followed.</p></div>
+            <div class="quad"><div><div class="n"><span class="cnt" data-to="20" data-prefix="+" data-suffix="%">+20%</span></div><div class="l">User engagement</div></div><div><div class="n"><span class="cnt" data-to="12" data-prefix="+" data-suffix="%">+12%</span></div><div class="l">App downloads</div></div><div><div class="n"><span class="cnt" data-to="10" data-prefix="+" data-suffix="%">+10%</span></div><div class="l">Monthly active users</div></div><div><div class="n"><span class="cnt" data-to="10" data-prefix="−" data-suffix="%">−10%</span></div><div class="l">User acceptance testing time</div></div></div>
+          </div>
+          <div class="kpi-card rv" style="--d:0s"><div><div class="n gt"><span class="cnt" data-to="50000" data-prefix="HK$" data-suffix="+">HK$50,000+</span></div><div class="l">Co-sponsored rewards secured</div></div><div class="s mono">csl Partnerships</div></div>
+          <div class="kpi-card rv" style="--d:0.06s"><div><div class="n gt"><span class="cnt" data-to="40" data-prefix="+" data-suffix="%">+40%</span></div><div class="l">Brand visibility</div></div><div class="s mono">Matrix Events</div></div>
+          <div class="kpi-card rv" style="--d:0s"><div><div class="n gt"><span class="cnt" data-to="25" data-prefix="+" data-suffix="%">+25%</span></div><div class="l">Leads generated</div></div><div class="s mono">Matrix Events</div></div>
+          <div class="kpi-card rv" style="--d:0.06s"><div><div class="n gt"><span class="cnt" data-to="25" data-prefix="+" data-suffix="%">+25%</span></div><div class="l">Campaign effectiveness</div></div><div class="s mono">csl Customer Segmentation</div></div>
         </div>
       </div>
 
       <div class="sec" data-stop>
-        <div class="sec-h"><h3>Smaller wins along the way</h3></div>
-        <ul class="rows supp">
-          <li class="row"><span class="n">20%</span><span>improvement in advertising ROI.</span></li>
-          <li class="row"><span class="n">25%</span><span>improvement in data accuracy.</span></li>
-          <li class="row"><span class="n">12%</span><span>coupon redemption rate.</span></li>
-          <li class="row"><span class="n">20%</span><span>increase in successful media partnerships.</span></li>
-        </ul>
+        <div class="sec-h"><h3>More results</h3></div>
+        <ul class="chips"><li class="chip rv"><div class="n gt">20%</div><div class="l">Advertising ROI improvement</div><div class="s mono">Facebook campaigns</div></li><li class="chip rv"><div class="n gt">25%</div><div class="l">Data accuracy improvement</div><div class="s mono">Wisers analytics</div></li><li class="chip rv"><div class="n gt">12%</div><div class="l">Coupon redemption rate</div><div class="s mono">Pet-friendly stores</div></li><li class="chip rv"><div class="n gt">20%</div><div class="l">More successful media partnerships</div><div class="s mono">Wave Insight sales</div></li></ul>
       </div>
 
       <div class="sec" data-stop data-label="My value to Cathay">
@@ -798,34 +975,45 @@ button { font: inherit; color: inherit; }
               <h4>Cathay Dining</h4>
               <p>Brand storytelling, promotional campaigns, event planning and partnership opportunities.</p>
             </div>
-            <svg class="dine-svg" id="dineSvg" viewBox="0 0 360 250" role="img" aria-label="Airplane window above a tray with a seafood ricebox">
+            <svg class="dine-svg" id="dineSvg" viewBox="0 0 360 250" role="img" aria-label="Two Cathay x gwei-lo Betsy Free cans cheering in front of an airplane window">
               <defs>
                 <clipPath id="winclip"><rect x="110" y="8" width="140" height="96" rx="48"/></clipPath>
                 <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6FA8E3"/><stop offset="1" stop-color="#D7ECFA"/></linearGradient>
+                <linearGradient id="alu" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8D9195"/><stop offset=".28" stop-color="#D9DCDE"/><stop offset=".55" stop-color="#F0F1F2"/><stop offset="1" stop-color="#9A9EA2"/></linearGradient>
               </defs>
               <rect x="98" y="0" width="164" height="112" rx="56" fill="#CFCFCB"/>
-              <g clip-path="url(#winclip)">
-                <rect x="110" y="8" width="140" height="96" fill="url(#sky)"/>
+              <g clip-path="url(#winclip)"><rect x="110" y="8" width="140" height="96" fill="url(#sky)"/>
                 <g class="cl c1"><ellipse cx="150" cy="40" rx="22" ry="8" fill="#fff"/><ellipse cx="168" cy="35" rx="14" ry="8" fill="#fff"/></g>
-                <g class="cl c2"><ellipse cx="206" cy="74" rx="26" ry="9" fill="#fff"/><ellipse cx="224" cy="68" rx="14" ry="8" fill="#fff"/></g>
-              </g>
+                <g class="cl c2"><ellipse cx="206" cy="74" rx="26" ry="9" fill="#fff"/><ellipse cx="224" cy="68" rx="14" ry="8" fill="#fff"/></g></g>
               <rect x="110" y="8" width="140" height="96" rx="48" fill="none" stroke="#9A9A95" stroke-width="3"/>
-              <rect x="20" y="168" width="320" height="66" rx="12" fill="#3B3F44"/>
-              <rect x="20" y="168" width="320" height="8" rx="4" fill="#4C5157"/>
-              <path d="M84 142h192l-10 72H94z" fill="#E8DFC9" stroke="#BFB394" stroke-width="2"/>
-              <ellipse cx="180" cy="143" rx="96" ry="11" fill="#D3C8AB"/>
-              <ellipse cx="180" cy="136" rx="88" ry="20" fill="#FBFAF5"/>
-              <path d="M112 128c8-16 30-16 36 0-9-5-20-3-28 6z" fill="#F2915A"/>
-              <path d="M150 124c8-16 30-16 36 0-9-5-20-3-28 6z" fill="#F4A06C"/>
-              <rect x="196" y="116" width="46" height="18" rx="9" fill="#F6A3A3" transform="rotate(-8 219 125)"/>
-              <rect x="226" y="122" width="38" height="16" rx="8" fill="#F9B9B0" transform="rotate(10 245 130)"/>
-              <rect x="132" y="132" width="70" height="8" rx="3" fill="#2F4A3A"/>
-              <g fill="#D8432F"><circle cx="164" cy="112" r="3.5"/><circle cx="172" cy="108" r="3.5"/><circle cx="180" cy="113" r="3.5"/><circle cx="170" cy="117" r="3.5"/></g>
-              <path d="M96 118c8-7 18-7 26 0z" fill="#F2D44B"/>
-              <g class="steam" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M150 100c-6-8 6-12 0-20"/><path d="M180 98c-6-8 6-12 0-20"/><path d="M210 100c-6-8 6-12 0-20"/></g>
-              <g class="lid"><path d="M78 108h204l8 38H70z" fill="#D9CCAA" stroke="#BFB394" stroke-width="2"/><rect x="70" y="136" width="220" height="8" rx="3" fill="#C9BB94"/><text x="180" y="130" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="13" fill="#7A6D4C">Seafood ricebox</text></g>
+              <rect x="20" y="206" width="320" height="30" rx="10" fill="#3B3F44"/><rect x="20" y="206" width="320" height="7" rx="3.5" fill="#4C5157"/>
+              <g class="mug l">
+                <rect x="104" y="116" width="52" height="90" rx="6" fill="url(#alu)"/>
+                <ellipse cx="130" cy="116" rx="26" ry="5" fill="#D9DCDE" stroke="#8E9296" stroke-width="1"/><ellipse cx="130" cy="115.5" rx="20" ry="3" fill="#B5B9BC"/><rect x="124" y="113" width="12" height="4" rx="2" fill="#E9EBEC" stroke="#8E9296" stroke-width=".6"/>
+                <path d="M107 122v78" stroke="#fff" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+                <text x="130" y="146" text-anchor="middle" font-family="'Brush Script MT','Snell Roundhand','Segoe Script',cursive" font-style="italic" font-weight="700" font-size="19" fill="#23282B">Betsy</text>
+                <path d="M111 151q19 -3 38 0" fill="none" stroke="#23282B" stroke-width="2.2" stroke-linecap="round"/>
+                <text x="130" y="166" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="11.5" letter-spacing="1.2" fill="#23282B">FREE</text>
+                <text x="130" y="174" text-anchor="middle" font-family="Inter, sans-serif" font-size="4.6" letter-spacing=".4" fill="#3A4044">0.3% ABV</text>
+                <path d="M110 184h40" stroke="#B0443A" stroke-width=".7"/>
+                <text x="110" y="198" font-family="Inter, sans-serif" font-weight="600" font-size="4.4" fill="#23282B">CATHAY</text><text x="150" y="198" text-anchor="end" font-family="Inter, sans-serif" font-size="4.8" fill="#23282B">gwei-lo</text>
+                <g fill="#fff" fill-opacity=".75"><circle cx="114" cy="132" r="1"/><circle cx="146" cy="138" r="1"/><circle cx="118" cy="176" r="1.1"/><circle cx="142" cy="186" r="1"/><circle cx="126" cy="125" r=".9"/></g>
+              </g>
+              <g class="mug r">
+                <rect x="204" y="116" width="52" height="90" rx="6" fill="url(#alu)"/>
+                <ellipse cx="230" cy="116" rx="26" ry="5" fill="#D9DCDE" stroke="#8E9296" stroke-width="1"/><ellipse cx="230" cy="115.5" rx="20" ry="3" fill="#B5B9BC"/><rect x="224" y="113" width="12" height="4" rx="2" fill="#E9EBEC" stroke="#8E9296" stroke-width=".6"/>
+                <path d="M207 122v78" stroke="#fff" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+                <text x="230" y="146" text-anchor="middle" font-family="'Brush Script MT','Snell Roundhand','Segoe Script',cursive" font-style="italic" font-weight="700" font-size="19" fill="#23282B">Betsy</text>
+                <path d="M211 151q19 -3 38 0" fill="none" stroke="#23282B" stroke-width="2.2" stroke-linecap="round"/>
+                <text x="230" y="166" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="11.5" letter-spacing="1.2" fill="#23282B">FREE</text>
+                <text x="230" y="174" text-anchor="middle" font-family="Inter, sans-serif" font-size="4.6" letter-spacing=".4" fill="#3A4044">0.3% ABV</text>
+                <path d="M210 184h40" stroke="#B0443A" stroke-width=".7"/>
+                <text x="210" y="198" font-family="Inter, sans-serif" font-weight="600" font-size="4.4" fill="#23282B">CATHAY</text><text x="250" y="198" text-anchor="end" font-family="Inter, sans-serif" font-size="4.8" fill="#23282B">gwei-lo</text>
+                <g fill="#fff" fill-opacity=".75"><circle cx="214" cy="132" r="1"/><circle cx="246" cy="138" r="1"/><circle cx="218" cy="176" r="1.1"/><circle cx="242" cy="186" r="1"/><circle cx="226" cy="125" r=".9"/></g>
+              </g>
+              <g class="spark" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M180 98v-14M166 104l-10-9M194 104l10-9M160 118h-12M200 118h12"/></g>
             </svg>
-            <button type="button" class="dine-btn" id="dineBtn" aria-pressed="false">Close the lid</button>
+            <button type="button" class="dine-btn" id="dineBtn">Cheers!</button>
           </div>
         </div>
       </div>
@@ -837,14 +1025,14 @@ button { font: inherit; color: inherit; }
 <section id="close" data-label="Close">
   <div class="close dark" data-stop>
     <div class="wrap">
-      <div class="meta"><span>Thank you for your time</span><span>November 2026</span></div>
-      <h2 class="giant drift"><span class="mask"><span>Thank you.</span></span></h2>
-      <p class="sub">I am happy to go deeper on any project, result or method in this portfolio.</p>
+      <h2 class="giant"><span class="mask"><span>Thank you.</span></span></h2>
+      <p class="sub">Happy to go deeper on any project, result or method.</p>
       <div class="cols">
         <div><h4>Tools</h4><ul><li>Salesforce</li><li>Tableau</li><li>Google Analytics</li><li>Tealium</li><li>Office 365</li></ul></div>
         <div><h4>Languages</h4><ul><li>Cantonese</li><li>English</li><li>Mandarin</li></ul></div>
         <div><h4>Education</h4><ul><li>City University of Hong Kong</li><li>BA, Digital Television and Broadcasting</li></ul></div>
-        <div><h4>Contact</h4><ul><li><span class="add" style="margin-top:0">Add email address</span></li><li><span class="add" style="margin-top:.4rem">Add phone number</span></li><li class="mute" style="margin-top:.5rem">Available with one month's notice</li></ul></div>
+        <div><h4>Availability</h4><ul><li>Available with one month’s notice</li></ul></div>
+        <!-- To add contact details, insert here: <div><h4>Contact</h4><ul><li><a href="mailto:you@example.com">you@example.com</a></li></ul></div> -->
       </div>
       <div class="foot mono mute">Carmen Li | Portfolio</div>
     </div>
@@ -853,6 +1041,10 @@ button { font: inherit; color: inherit; }
 </main>
 </div>
 
+<script>
+/* Optional: publish images with the site by mapping slot numbers to files, e.g. window.PF_IMAGES = { "01": "images/carmen.jpg" }; */
+window.PF_IMAGES = window.PF_IMAGES || {};
+</script>
 <script>
 (function () {
   var root = document.documentElement;
@@ -870,7 +1062,7 @@ button { font: inherit; color: inherit; }
   document.querySelectorAll('label.slot[data-n]').forEach(function (s) {
     var n = s.dataset.n, free = s.hasAttribute('data-free');
     s.innerHTML = '<input type="file" accept="image/*" id="img' + n + '" data-slot="' + n + '">' +
-      '<span class="slot-tag"></span><span class="slot-note"></span><span class="slot-spec"></span><img alt="" hidden draggable="false">';
+      '<span class="slot-tag"></span><span class="slot-note"></span><span class="slot-spec"></span><img alt="" hidden draggable="false" loading="lazy" decoding="async">';
     s.querySelector('.slot-tag').textContent = 'Image ' + n + (s.dataset.tagx ? ' · ' + s.dataset.tagx : '');
     s.querySelector('.slot-note').textContent = s.dataset.note || '';
     s.querySelector('.slot-spec').textContent = s.dataset.spec || (free ? 'Any size · keeps its shape' : '');
@@ -890,7 +1082,7 @@ button { font: inherit; color: inherit; }
     var input = slot.querySelector('input');
     if (!input) return;
     var key = 'carmen-pf3-img-' + input.dataset.slot;
-    var saved = lsGet(key);
+    var saved = lsGet(key) || (window.PF_IMAGES && window.PF_IMAGES[input.dataset.slot]);
     if (saved) show(slot, saved);
     input.addEventListener('change', function () {
       var f = input.files && input.files[0];
@@ -914,16 +1106,18 @@ button { font: inherit; color: inherit; }
     });
   });
 
-  /* ---- Edit images on / off ---- */
-  var editBtn = document.getElementById('editBtn');
+  /* ---- Image upload is owner-only. Visitors cannot add images. Owner: open the page once with ?owner=YOUR-CODE ---- */
+  var OWNER = 'c7bfa8c87de546c8762d2d7947ec6d368bb51b067a6e8facd1d82d40a99c649f';
   function setEdit(on) {
     root.classList.toggle('lock-img', !on);
-    editBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
-    editBtn.textContent = 'Edit images: ' + (on ? 'on' : 'off');
-    lsSet('carmen-pf3-edit', on ? '1' : '0');
+    document.querySelectorAll('.slot input').forEach(function (i) { i.disabled = !on; });
   }
-  setEdit(lsGet('carmen-pf3-edit') !== '0');
-  editBtn.addEventListener('click', function () { setEdit(editBtn.getAttribute('aria-pressed') !== 'true'); });
+  setEdit(false);
+  (function () {
+    var q = ''; try { q = new URLSearchParams(location.search).get('owner') || ''; } catch (e) {}
+    if (q) { digest(q.trim()).then(function (h) { if (h === OWNER) { lsSet('carmen-pf3-owner', OWNER); setEdit(true); } }); }
+    else if (lsGet('carmen-pf3-owner') === OWNER) setEdit(true);
+  })();
 
   /* ---- Scroll reveal ---- */
   if (hasIO && !reduce) {
@@ -1121,22 +1315,28 @@ button { font: inherit; color: inherit; }
     }
   })();
 
-  /* ---- Seafood ricebox ---- */
+  /* ---- Cheers ---- */
   (function () {
-    var svg = document.getElementById('dineSvg'), btn = document.getElementById('dineBtn'), opened = false;
-    function set(o) {
-      svg.classList.toggle('open', o);
-      btn.setAttribute('aria-pressed', o ? 'true' : 'false');
-      btn.textContent = o ? 'Close the lid' : 'Open the ricebox';
-    }
-    btn.addEventListener('click', function () { set(!svg.classList.contains('open')); });
-    svg.querySelector('.lid').addEventListener('click', function () { set(!svg.classList.contains('open')); });
-    set(reduce);
+    var svg = document.getElementById('dineSvg'), btn = document.getElementById('dineBtn'), played = false;
+    function clink() { svg.classList.remove('cheer'); void svg.getBoundingClientRect(); setTimeout(function () { svg.classList.add('cheer'); }, 80); }
+    btn.addEventListener('click', clink);
+    svg.addEventListener('click', clink);
     if (hasIO && !reduce) {
-      new IntersectionObserver(function (es, o) {
-        if (es[0].isIntersecting && !opened) { opened = true; setTimeout(function () { set(true); }, 700); o.disconnect(); }
-      }, { threshold: 0.5 }).observe(svg);
-    } else { set(true); }
+      new IntersectionObserver(function (es, o) { if (es[0].isIntersecting && !played) { played = true; setTimeout(clink, 700); o.disconnect(); } }, { threshold: 0.5 }).observe(svg);
+    } else { svg.classList.add('cheer'); }
+  })();
+
+  /* ---- Pet show slideshow ---- */
+  (function () {
+    var s = document.getElementById('petShow'); if (!s) return;
+    var tr = s.querySelector('.show-track'), cnt = s.querySelector('.show-count'), n = tr.children.length;
+    function go(d) { tr.scrollBy({ left: d * tr.clientWidth, behavior: reduce ? 'auto' : 'smooth' }); }
+    s.querySelector('.prev').addEventListener('click', function () { go(-1); });
+    s.querySelector('.next').addEventListener('click', function () { go(1); });
+    tr.addEventListener('scroll', function () { cnt.textContent = (Math.round(tr.scrollLeft / tr.clientWidth) + 1) + ' / ' + n; }, { passive: true });
+    tr.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(1); } else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+    });
   })();
 
   /* ---- Header: label, dark state; progress; word highlight; title drift ---- */
