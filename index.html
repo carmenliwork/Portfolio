@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Carmen Li | Marketing &amp; Communications Portfolio</title><meta name="description" content="Portfolio of Carmen Li, marketing and communications professional with 8+ years of experience in brand, digital, partnerships, content and experiential campaigns."><meta name="theme-color" content="#FAF7F2"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="en" class="lock-img"><head><meta charset="utf-8"><title>Carmen Li | Marketing &amp; Communications Portfolio</title><meta name="description" content="Portfolio of Carmen Li, marketing and communications professional with 8+ years of experience in brand, digital, partnerships, content and experiential campaigns."><meta name="theme-color" content="#FAF7F2"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,wght@1,400;1,500&display=swap">
@@ -552,6 +552,17 @@ body { background: radial-gradient(60rem 40rem at 90% -5%, rgba(92,143,168,.13),
 .pair.compact .slot { flex: none; width: auto; height: clamp(150px, 32vw, 340px); aspect-ratio: var(--ar, 4/3); max-width: 100%; }
 .show { max-width: min(100%, 720px, calc((100vh - 11rem) * 1.6)); margin-inline: auto; }
 @supports (height: 100svh) { .show { max-width: min(100%, 720px, calc((100svh - 11rem) * 1.6)); } }
+
+/* Round 5: click-to-enlarge popup, no uploads */
+.slot.has-img { cursor: zoom-in; }
+html.lb-open { overflow: hidden; }
+.lb { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; padding: max(clamp(16px, 4vw, 40px), env(safe-area-inset-top, 0px)) max(clamp(16px, 4vw, 40px), env(safe-area-inset-right, 0px)) max(clamp(16px, 4vw, 40px), env(safe-area-inset-bottom, 0px)) max(clamp(16px, 4vw, 40px), env(safe-area-inset-left, 0px)); background: rgba(24,28,30,.72); opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility .25s; cursor: zoom-out; }
+.lb.open { opacity: 1; visibility: visible; }
+.lb-box { position: relative; max-width: min(100%, 1000px); padding: 10px; background: #fff; border-radius: 8px; box-shadow: 0 24px 60px rgba(0,0,0,.35); transform: scale(.96); transition: transform .25s ease; cursor: default; }
+.lb.open .lb-box { transform: none; }
+.lb-box img { display: block; width: auto; height: auto; max-width: 100%; max-height: calc(100vh - 7rem); margin: 0 auto; border-radius: 3px; }
+@supports (height: 100svh) { .lb-box img { max-height: calc(100svh - 7rem); } }
+.lb-x { position: absolute; top: -14px; right: -14px; width: 40px; height: 40px; border: 0; border-radius: 50%; background: #fff; color: var(--ink); font: 400 1.5rem/1 var(--display); cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.25); -webkit-tap-highlight-color: transparent; }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -1104,13 +1115,11 @@ window.PF_IMAGES = {
   /* ---- Build image slots from their data attributes ---- */
   document.querySelectorAll('label.slot[data-n]').forEach(function (s) {
     var n = s.dataset.n, free = s.hasAttribute('data-free');
-    s.innerHTML = '<input type="file" accept="image/*" id="img' + n + '" data-slot="' + n + '">' +
-      '<span class="slot-tag"></span><span class="slot-note"></span><span class="slot-spec"></span><img alt="" hidden draggable="false" decoding="async">';
+    s.innerHTML = '<span class="slot-tag"></span><span class="slot-note"></span><span class="slot-spec"></span><img alt="" hidden draggable="false" decoding="async">';
     s.querySelector('.slot-tag').textContent = 'Image ' + n + (s.dataset.tagx ? ' · ' + s.dataset.tagx : '');
     s.querySelector('.slot-note').textContent = s.dataset.note || '';
     s.querySelector('.slot-spec').textContent = s.dataset.spec || (free ? 'Any size · keeps its shape' : '');
     s.querySelector('img').alt = s.dataset.alt || '';
-    s.querySelector('input').setAttribute('aria-label', 'Add image ' + n + (s.dataset.alt ? ', ' + s.dataset.alt : ''));
   });
 
   /* ---- Image slots: click or drop an image. Stored in this browser only. ---- */
@@ -1135,50 +1144,51 @@ window.PF_IMAGES = {
       probe.onload = function () {
         if (slot.hasAttribute('data-free') && probe.naturalWidth) slot.style.setProperty('--ar', probe.naturalWidth + '/' + probe.naturalHeight);
         img.src = probe.src; img.hidden = false; slot.classList.add('has-img');
+        if (!slot.closest('[data-ba]')) { slot.tabIndex = 0; slot.setAttribute('role', 'button'); slot.setAttribute('aria-label', 'Enlarge image' + (slot.dataset.alt ? ': ' + slot.dataset.alt : '')); }
       };
       probe.onerror = function () { i++; next(); };
       probe.src = list[i];
     })();
   }
-  document.querySelectorAll('label.slot').forEach(function (slot) {
-    var input = slot.querySelector('input');
-    if (!input) return;
-    var key = 'carmen-pf3-img-' + input.dataset.slot;
-    var saved = lsGet(key) || (window.PF_IMAGES && window.PF_IMAGES[input.dataset.slot]);
+  /* Images come only from the list above (window.PF_IMAGES). Visitors cannot upload anything. */
+  document.querySelectorAll('label.slot[data-n]').forEach(function (slot) {
+    var saved = window.PF_IMAGES && window.PF_IMAGES[slot.dataset.n];
     if (saved) show(slot, saved);
-    input.addEventListener('change', function () {
-      var f = input.files && input.files[0];
-      if (!f || !/^image\//.test(f.type)) return;
-      var r = new FileReader();
-      r.onload = function () {
-        var im = new Image();
-        im.onload = function () {
-          var sc = Math.min(1, 1800 / Math.max(im.width, im.height));
-          var c = document.createElement('canvas');
-          c.width = Math.round(im.width * sc); c.height = Math.round(im.height * sc);
-          var g = c.getContext('2d');
-          g.fillStyle = '#ffffff'; g.fillRect(0, 0, c.width, c.height);
-          g.drawImage(im, 0, 0, c.width, c.height);
-          var url = c.toDataURL('image/jpeg', 0.86);
-          show(slot, url); lsSet(key, url); input.value = '';
-        };
-        im.src = r.result;
-      };
-      r.readAsDataURL(f);
-    });
   });
 
-  /* ---- Image upload is owner-only. Visitors cannot add images. Owner: open the page once with ?owner=YOUR-CODE ---- */
-  var OWNER = 'c7bfa8c87de546c8762d2d7947ec6d368bb51b067a6e8facd1d82d40a99c649f';
-  function setEdit(on) {
-    root.classList.toggle('lock-img', !on);
-    document.querySelectorAll('.slot input').forEach(function (i) { i.disabled = !on; });
-  }
-  setEdit(false);
+  /* ---- Click an image to pop it out ---- */
   (function () {
-    var q = ''; try { q = new URLSearchParams(location.search).get('owner') || ''; } catch (e) {}
-    if (q) { digest(q.trim()).then(function (h) { if (h === OWNER) { lsSet('carmen-pf3-owner', OWNER); setEdit(true); } }); }
-    else if (lsGet('carmen-pf3-owner') === OWNER) setEdit(true);
+    var lb = document.createElement('div');
+    lb.className = 'lb'; lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-modal', 'true'); lb.setAttribute('aria-label', 'Enlarged image');
+    lb.innerHTML = '<div class="lb-box"><button type="button" class="lb-x" aria-label="Close">×</button><img alt=""></div>';
+    document.body.appendChild(lb);
+    var img = lb.querySelector('img'), x = lb.querySelector('.lb-x'), from = null;
+    function open(slot) {
+      var src = slot.querySelector('img');
+      if (!src || !src.src) return;
+      from = slot; img.src = src.src; img.alt = src.alt || '';
+      lb.classList.add('open'); root.classList.add('lb-open'); x.focus();
+    }
+    function close() {
+      if (!lb.classList.contains('open')) return;
+      lb.classList.remove('open'); root.classList.remove('lb-open');
+      if (from) { try { from.focus(); } catch (e) {} from = null; }
+    }
+    document.addEventListener('click', function (e) {
+      var s = e.target.closest && e.target.closest('label.slot.has-img');
+      if (!s || s.closest('[data-ba]') || lb.contains(e.target)) return;
+      e.preventDefault(); open(s);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (lb.classList.contains('open')) {
+        if (e.key === 'Escape') { e.preventDefault(); close(); }
+        else if (e.key === 'Tab') { e.preventDefault(); x.focus(); }
+        return;
+      }
+      var s = e.target.closest && e.target.closest('label.slot.has-img');
+      if (s && (e.key === 'Enter' || e.key === ' ') && !s.closest('[data-ba]')) { e.preventDefault(); open(s); }
+    }, true);
+    lb.addEventListener('click', function (e) { if (e.target !== img) close(); });
   })();
 
   /* ---- Scroll reveal ---- */
