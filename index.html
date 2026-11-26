@@ -546,6 +546,12 @@ body { background: radial-gradient(60rem 40rem at 90% -5%, rgba(92,143,168,.13),
 @supports (font-size: 1cqw) { .metric .n { font-size: min(2.8rem, 15.5cqw); } }
 .metrics { grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
 .metrics.m4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* Round 4: smaller, balanced image pairs and a slideshow that fits a laptop screen */
+.pair.compact { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; }
+.pair.compact .slot { flex: none; width: auto; height: clamp(150px, 32vw, 340px); aspect-ratio: var(--ar, 4/3); max-width: 100%; }
+.show { max-width: min(100%, 720px, calc((100vh - 11rem) * 1.6)); margin-inline: auto; }
+@supports (height: 100svh) { .show { max-width: min(100%, 720px, calc((100svh - 11rem) * 1.6)); } }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -768,12 +774,12 @@ body { background: radial-gradient(60rem 40rem at 90% -5%, rgba(92,143,168,.13),
             <p>The ACX booklet (Matrix Research) and csl retail offline materials (CSL Mobile).</p>
           </div>
           <p class="sub-label label"><span>ACX booklet</span></p>
-          <div class="pair lift" style="margin-bottom:2.5rem">
+          <div class="pair compact lift" style="margin-bottom:2.5rem">
             <label class="slot" data-free style="--ar:3/4" data-n="12" data-note="ACX booklet: cover or spread, any size." data-alt="ACX booklet"></label>
             <label class="slot" data-free style="--ar:4/3" data-n="13" data-note="ACX booklet: inside pages, any size." data-alt="ACX booklet inside pages"></label>
           </div>
           <p class="sub-label label"><span>csl retail offline materials</span></p>
-          <div class="pair lift">
+          <div class="pair compact lift">
             <label class="slot" data-free style="--ar:4/3" data-n="15" data-note="Store poster, display or leaflet, any size." data-alt="csl retail material"></label>
             <label class="slot" data-free style="--ar:3/4" data-n="16" data-note="Store poster, display or leaflet, any size." data-alt="csl retail material"></label>
           </div>
@@ -870,7 +876,7 @@ body { background: radial-gradient(60rem 40rem at 90% -5%, rgba(92,143,168,.13),
             </div>
           </div>
           <p class="sub-label label"><span>Trade show photos</span></p>
-          <div class="pair lift" style="margin-bottom:3.5rem"><label class="slot" data-free style="--ar:4/3" data-n="24" data-note="Trade show photo, any size." data-alt="Trade show photo"></label><label class="slot" data-free style="--ar:4/3" data-n="25" data-note="Trade show photo, any size." data-alt="Trade show photo"></label></div>
+          <div class="pair compact lift" style="margin-bottom:3.5rem"><label class="slot" data-free style="--ar:4/3" data-n="24" data-note="Trade show photo, any size." data-alt="Trade show photo"></label><label class="slot" data-free style="--ar:4/3" data-n="25" data-note="Trade show photo, any size." data-alt="Trade show photo"></label></div>
 
           <div class="case" style="padding-bottom:1.5rem">
             <span class="mono co">CSL Mobile Limited (HKT) · csl pet shows</span>
