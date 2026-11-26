@@ -1051,35 +1051,35 @@ body { background: radial-gradient(60rem 40rem at 90% -5%, rgba(92,143,168,.13),
 <script>
 /* Optional: publish images with the site by mapping slot numbers to files, e.g. window.PF_IMAGES = { "01": "images/carmen.jpg" }; */
 window.PF_IMAGES = {
-  "01": "IMG_5334.jpeg",
-  "02": "IMG_4351.png",
-  "03": "IMG_5212.png",
-  "04": "IMG_5766.jpeg",
-  "05": "IMG_9312.jpeg",
-  "06": "IMG_9331.jpeg",
-  "07": "IMG_9317.jpeg",
-  "08": "IMG_9321.jpeg",
-  "09": "IMG_9326.jpeg",
-  "10": "IMG_9328.jpeg",
-  "11": "IMG_9324.png",
-  "12": "IMG_9329.png",
-  "13": "IMG_9330.png",
-  "15": "202607-csl.jpeg",
-  "16": "CSL_10CP_A4_SKY&LOS_(Update).jpeg",
-  "18": "IMG_9333.png",
-  "19": "IMG_9311.jpeg",
-  "20": "IMG_9368.jpeg",
-  "22": "IMG_9336.jpeg",
-  "23": "IMG_9341.jpeg",
-  "24": "IMG_9339.jpeg",
-  "25": "IMG_9343.jpeg",
-  "28": "IMG_9348.jpeg",
-  "29": "IMG_9347.jpeg",
-  "30": "IMG_9350.jpeg",
-  "31": "IMG_9351.jpeg",
-  "33": "IMG_9352.jpeg",
-  "34": Cat Expo.jpeg",
-  "35": "Petalife.png"
+  "01": "IMG_5334.jpeg",
+  "02": "IMG_4351.png",
+  "03": "IMG_5212.png",
+  "04": "IMG_5766.jpeg",
+  "05": "IMG_9312.jpeg",
+  "06": "IMG_9331.JPG",
+  "07": "IMG_9317.jpeg",
+  "08": "IMG_9321.jpeg",
+  "09": "IMG_9326.jpeg",
+  "10": "IMG_9328.jpeg",
+  "11": "IMG_9324.png",
+  "12": "IMG_9329.PNG",
+  "13": "IMG_9330.PNG",
+  "15": "202607-csl.jpeg",
+  "16": "CSL_10CP_A4_SKY&LOS_(Update).jpeg",
+  "18": "IMG_9333.PNG",
+  "19": "IMG_9311.jpeg",
+  "20": "IMG_9368.JPG",
+  "22": "IMG_9336.jpg",
+  "23": "IMG_9341.JPG",
+  "24": "IMG_9339.JPG",
+  "25": "IMG_9343.JPG",
+  "28": "IMG_9348.JPG",
+  "29": "IMG_9347.JPG",
+  "30": "IMG_9350.JPG",
+  "31": "IMG_9351.JPG",
+  "33": "IMG_9352.JPG",
+  "34": "Cat Expo.jpeg",
+  "35": "Petalife.png"
 };
 </script>
 <script>
@@ -1099,7 +1099,7 @@ window.PF_IMAGES = {
   document.querySelectorAll('label.slot[data-n]').forEach(function (s) {
     var n = s.dataset.n, free = s.hasAttribute('data-free');
     s.innerHTML = '<input type="file" accept="image/*" id="img' + n + '" data-slot="' + n + '">' +
-      '<span class="slot-tag"></span><span class="slot-note"></span><span class="slot-spec"></span><img alt="" hidden draggable="false" loading="lazy" decoding="async">';
+      '<span class="slot-tag"></span><span class="slot-note"></span><span class="slot-spec"></span><img alt="" hidden draggable="false" decoding="async">';
     s.querySelector('.slot-tag').textContent = 'Image ' + n + (s.dataset.tagx ? ' · ' + s.dataset.tagx : '');
     s.querySelector('.slot-note').textContent = s.dataset.note || '';
     s.querySelector('.slot-spec').textContent = s.dataset.spec || (free ? 'Any size · keeps its shape' : '');
@@ -1108,12 +1108,31 @@ window.PF_IMAGES = {
   });
 
   /* ---- Image slots: click or drop an image. Stored in this browser only. ---- */
+  /* Loads a picture without ever showing a broken one. For files in the repo it also tries the same name with
+     other extension spellings (.JPG / .jpg / .jpeg / .PNG / .png), because GitHub Pages is case-sensitive. */
+  function candidates(p) {
+    if (/^(data:|blob:|https?:)/i.test(p)) return [p];
+    var m = p.match(/^(.*)\.([A-Za-z0-9]+)$/);
+    if (!m) return [encodeURI(p)];
+    var seen = {}, out = [];
+    [m[2], 'jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'webp', 'WEBP'].forEach(function (x) {
+      var u = encodeURI(m[1] + '.' + x);
+      if (!seen[u]) { seen[u] = 1; out.push(u); }
+    });
+    return out;
+  }
   function show(slot, src) {
-    var img = slot.querySelector('img');
-    if (slot.hasAttribute('data-free')) {
-      img.onload = function () { if (img.naturalWidth) slot.style.setProperty('--ar', img.naturalWidth + '/' + img.naturalHeight); };
-    }
-    img.src = src; img.hidden = false; slot.classList.add('has-img');
+    var img = slot.querySelector('img'), list = candidates(src), i = 0;
+    (function next() {
+      if (i >= list.length) return;
+      var probe = new Image();
+      probe.onload = function () {
+        if (slot.hasAttribute('data-free') && probe.naturalWidth) slot.style.setProperty('--ar', probe.naturalWidth + '/' + probe.naturalHeight);
+        img.src = probe.src; img.hidden = false; slot.classList.add('has-img');
+      };
+      probe.onerror = function () { i++; next(); };
+      probe.src = list[i];
+    })();
   }
   document.querySelectorAll('label.slot').forEach(function (slot) {
     var input = slot.querySelector('input');
