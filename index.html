@@ -538,6 +538,14 @@ body { background: radial-gradient(60rem 40rem at 90% -5%, rgba(92,143,168,.13),
 .lock-img .slot:not(.has-img) { display: none; }
 .lock-img :is(.masonry, .pair, .show, .portrait, .phone-wrap, .ba):not(:has(.has-img)) { display: none; }
 .lock-img .hero-grid:not(:has(.portrait .has-img)), .lock-img .split:not(:has(.has-img)) { grid-template-columns: minmax(0, 1fr); }
+
+/* Round 3: gradient figures must never clip */
+.metric .n, .kpi-card .n, .quad .n, .chip .n { width: max-content; max-width: none; padding-right: .06em; overflow: visible; }
+.metric { container-type: inline-size; }
+.metric .n { font-size: clamp(1.7rem, 3vw, 2.6rem); }
+@supports (font-size: 1cqw) { .metric .n { font-size: min(2.8rem, 15.5cqw); } }
+.metrics { grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+.metrics.m4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -1013,7 +1021,6 @@ body { background: radial-gradient(60rem 40rem at 90% -5%, rgba(92,143,168,.13),
               </g>
               <g class="spark" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M180 98v-14M166 104l-10-9M194 104l10-9M160 118h-12M200 118h12"/></g>
             </svg>
-            <button type="button" class="dine-btn" id="dineBtn">Cheers!</button>
           </div>
         </div>
       </div>
@@ -1317,9 +1324,8 @@ window.PF_IMAGES = window.PF_IMAGES || {};
 
   /* ---- Cheers ---- */
   (function () {
-    var svg = document.getElementById('dineSvg'), btn = document.getElementById('dineBtn'), played = false;
+    var svg = document.getElementById('dineSvg'), played = false;
     function clink() { svg.classList.remove('cheer'); void svg.getBoundingClientRect(); setTimeout(function () { svg.classList.add('cheer'); }, 80); }
-    btn.addEventListener('click', clink);
     svg.addEventListener('click', clink);
     if (hasIO && !reduce) {
       new IntersectionObserver(function (es, o) { if (es[0].isIntersecting && !played) { played = true; setTimeout(clink, 700); o.disconnect(); } }, { threshold: 0.5 }).observe(svg);
