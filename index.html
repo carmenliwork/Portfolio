@@ -563,6 +563,18 @@ html.lb-open { overflow: hidden; }
 .lb-box img { display: block; width: auto; height: auto; max-width: 100%; max-height: calc(100vh - 7rem); margin: 0 auto; border-radius: 3px; }
 @supports (height: 100svh) { .lb-box img { max-height: calc(100svh - 7rem); } }
 .lb-x { position: absolute; top: -14px; right: -14px; width: 40px; height: 40px; border: 0; border-radius: 50%; background: #fff; color: var(--ink); font: 400 1.5rem/1 var(--display); cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.25); -webkit-tap-highlight-color: transparent; }
+
+/* Round 6 */
+.pair.prop { display: flex; flex-wrap: nowrap; gap: 1rem; align-items: flex-start; max-width: var(--pw, 100%); }
+.pair.prop .slot { flex: var(--arn, 1) 1 0; width: auto; height: auto; min-width: 0; aspect-ratio: var(--ar, 4/3); }
+.collateral { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 3rem); align-items: start; }
+.collateral > div { min-width: 0; }
+.collateral .sub-label { margin-top: 0; }
+@media (max-width: 960px) { .collateral { grid-template-columns: minmax(0, 1fr); } .collateral .pair.prop { max-width: 560px; } }
+.tools { margin-top: clamp(1.5rem, 3vw, 2.5rem); padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.tools h3 { color: var(--mute); margin-bottom: .9rem; }
+.tools ul { display: flex; flex-wrap: wrap; gap: .5rem; }
+.tools li { font: 500 .78rem/1 var(--display); padding: .6rem .95rem; border-radius: 99px; background: rgba(255,255,255,.65); border: 1px solid var(--line); color: var(--ink); }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -649,6 +661,7 @@ html.lb-open { overflow: hidden; }
         <li class="tl rv"><span class="tl-date label">2020 – 2021</span><span class="rail"><i></i></span><div class="tl-body"><h3 class="t">Wave Insight Limited</h3><p class="role">Business Executive</p><p class="mute">Digital advertising, media proposals and commercial partnerships.</p></div></li>
         <li class="tl rv"><span class="tl-date label">2018 – 2020</span><span class="rail"><i></i></span><div class="tl-body"><h3 class="t">Wisers Information Limited</h3><p class="role">Client Solutions Officer</p><p class="mute">Media intelligence, social listening and data analytics.</p></div></li>
         </ol>
+      <div class="tools rv"><h3 class="label">Tools</h3><ul><li>Salesforce</li><li>Tableau</li><li>Google Analytics</li><li>Tealium</li><li>Office 365</li><li>Adobe Photoshop</li></ul></div>
     </div>
   </div>
 
@@ -784,15 +797,17 @@ html.lb-open { overflow: hidden; }
             <h4>Print and in-store materials.</h4>
             <p>The ACX booklet (Matrix Research) and csl retail offline materials (CSL Mobile).</p>
           </div>
-          <p class="sub-label label"><span>ACX booklet</span></p>
-          <div class="pair compact lift" style="margin-bottom:2.5rem">
+          <div class="collateral">
+          <div><p class="sub-label label"><span>ACX booklet</span></p>
+          <div class="pair prop lift">
             <label class="slot" data-free style="--ar:3/4" data-n="12" data-note="ACX booklet: cover or spread, any size." data-alt="ACX booklet"></label>
             <label class="slot" data-free style="--ar:4/3" data-n="13" data-note="ACX booklet: inside pages, any size." data-alt="ACX booklet inside pages"></label>
-          </div>
-          <p class="sub-label label"><span>csl retail offline materials</span></p>
-          <div class="pair compact lift">
+          </div></div>
+          <div><p class="sub-label label"><span>csl retail offline materials</span></p>
+          <div class="pair prop lift">
             <label class="slot" data-free style="--ar:4/3" data-n="15" data-note="Store poster, display or leaflet, any size." data-alt="csl retail material"></label>
             <label class="slot" data-free style="--ar:3/4" data-n="16" data-note="Store poster, display or leaflet, any size." data-alt="csl retail material"></label>
+          </div></div>
           </div>
         </div>
       </div>
@@ -848,17 +863,13 @@ html.lb-open { overflow: hidden; }
               </div>
             </div>
           </div>
-          <div class="split" style="margin-top:1rem">
-            <div class="case">
+          <div class="case" style="padding-bottom:1.5rem">
               <span class="mono co">Matrix Research Limited (ACX) · business partner collaboration</span>
               <h4>Working with business partners on shared projects.</h4>
               <p>Collaborated with business partners on joint marketing initiatives and shared projects, coordinating campaign execution, developing promotional content and ensuring alignment with business objectives.</p>
             </div>
-            <div class="masonry two lift">
-              <label class="slot" data-free style="--ar:4/3" data-n="22" data-note="Collaboration project, any size." data-alt="Vendor collaboration project"></label>
-              <label class="slot" data-free style="--ar:3/4" data-n="23" data-note="Collaboration project, any size." data-alt="Vendor collaboration project"></label>
-            </div>
-          </div>
+          <div class="pair prop lift" style="--pw:820px"><label class="slot" data-free style="--ar:4/3" data-n="22" data-note="Collaboration project, any size." data-alt="Vendor collaboration project"></label>
+              <label class="slot" data-free style="--ar:3/4" data-n="23" data-note="Collaboration project, any size." data-alt="Vendor collaboration project"></label></div>
         </div>
       </div>
     </div>
@@ -1052,7 +1063,6 @@ html.lb-open { overflow: hidden; }
       <h2 class="giant"><span class="mask"><span>Thank you.</span></span></h2>
       <p class="sub">Happy to go deeper on any project, result or method.</p>
       <div class="cols">
-        <div><h4>Tools</h4><ul><li>Salesforce</li><li>Tableau</li><li>Google Analytics</li><li>Tealium</li><li>Office 365</li></ul></div>
         <div><h4>Languages</h4><ul><li>Cantonese</li><li>English</li><li>Mandarin</li></ul></div>
         <div><h4>Education</h4><ul><li>City University of Hong Kong</li><li>BA, Digital Television and Broadcasting</li></ul></div>
         <div><h4>Availability</h4><ul><li>Available with one month’s notice</li></ul></div>
@@ -1142,7 +1152,7 @@ window.PF_IMAGES = {
       if (i >= list.length) return;
       var probe = new Image();
       probe.onload = function () {
-        if (slot.hasAttribute('data-free') && probe.naturalWidth) slot.style.setProperty('--ar', probe.naturalWidth + '/' + probe.naturalHeight);
+        if (slot.hasAttribute('data-free') && probe.naturalWidth) { slot.style.setProperty('--ar', probe.naturalWidth + '/' + probe.naturalHeight); slot.style.setProperty('--arn', (probe.naturalWidth / probe.naturalHeight).toFixed(4)); }
         img.src = probe.src; img.hidden = false; slot.classList.add('has-img');
         if (!slot.closest('[data-ba]')) { slot.tabIndex = 0; slot.setAttribute('role', 'button'); slot.setAttribute('aria-label', 'Enlarge image' + (slot.dataset.alt ? ': ' + slot.dataset.alt : '')); }
       };
